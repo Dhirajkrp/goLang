@@ -6,10 +6,7 @@ import (
 )
 
 func main(){
-	fmt.Println(lib.Concat("dhiraj" , "Prasad"))
-	a , b := 10,3
-	coef ,rem := lib.Divide(a,b)
-
-
-	fmt.Printf("The coeffecient and reamainder of %v / %v is : %v , %v ", a, b, coef, rem);
+	 count := 0;
+	lib.Increment(count);
+	fmt.Println("The value of count after executing Increment function is :" , count)
 }

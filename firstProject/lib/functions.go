@@ -1,5 +1,7 @@
 package lib
 
+import "fmt"
+
 func Concat(s1 string, s2 string) string {
 	return s1 + s2
 }
@@ -35,3 +37,15 @@ func Divide(a, b int) (coef, rem int) {
 	rem = a % b
 	return
 }
+// passing data into fucntions : data is passed by value and not by reference to the fucntions.
+// this means that the values are send as a copy to the function and any updates to that copy will only be temporary and will not reflect on the actual variable itself.
+
+//eg : lets take an example of funciton which takes a variable count increments it but 1 and prints the value.
+
+func Increment(count int) {
+	count++;
+	fmt.Println("The value of the variable count is:  " , count)
+}
+// the above function will increment the current value and print it, but the acutal value of the variable passed will not change.
+
+
