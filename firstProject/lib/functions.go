@@ -48,4 +48,26 @@ func Increment(count int) {
 }
 // the above function will increment the current value and print it, but the acutal value of the variable passed will not change.
 
+// thus in order to increment the actual variable we can return the incremented value and update the variable with it.
+
+
+func IncrementAndUpdate(count int) int {
+	count = count +1
+	return count
+}
+
+// the above function returns the updated value, so we can do something like,
+// count = IncrementAndUpdate(count);
+// thus successfully updating the cout.
+
+/* ---------------- Ignoring some return values ------------------- */
+
+// if we want to ignore a return value, we can use the underscore, '_' , this is different from other languages such as javascript where the undescore is just a naming convention, in go the value is acutally ignored and we can no longer use the varialble.
+
+
+// the above Divide function can be used just to get the coeffecient and not the remainder.
+
+// coef, _ := Divide(10,3);
+
+
 
