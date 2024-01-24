@@ -38,3 +38,16 @@ func PrintPersonDetails(person Person ){
 func HasPassword(user User) bool {
 	return user.password != ""
 }
+// anonymous structs we can also define some anomymous structs such as
+
+type Car struct {
+	Model string
+	Speed float32
+	Wheel struct{
+		Radus float32
+		Material string
+	}
+}
+
+// in the above struct we define the inner struct Wheel as an anonymous struct instead of declaring it outside.
+
