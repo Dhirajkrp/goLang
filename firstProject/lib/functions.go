@@ -69,5 +69,6 @@ func IncrementAndUpdate(count int) int {
 
 // coef, _ := Divide(10,3);
 
-
-
+func GetPersonName(person Person) string {
+	return person.Name
+}        
