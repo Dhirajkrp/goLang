@@ -1,21 +1,19 @@
 package lib
 
+import "fmt"
+
 // a struct helps us group some related fields together.
 // we can combine multiple fields as one struct eg:
-
-
-
 type Job struct {
-	designaion string
-	slary float32
-}	// we can also have nested struct.
+	Designaion string
+	Salary float32
+}
+// we can also have nested struct.
 type Person struct {
 	Name string
 	Age  int
 	CurrntJob Job
 }
-
-
 // adding setters and getters to the struct.
 type User struct{
 	username string
@@ -29,4 +27,14 @@ func SetUserName(user *User , name string){
 }
 func GetUserName(user User) string{
 	return  user.username
+}
+
+func PrintPersonDetails(person Person ){
+	fmt.Printf("Person name: %v \n" , person.Name)
+	fmt.Printf("Person Age: %v\n" , person.Age)
+	fmt.Printf("Person Designaion: %v\n" , person.CurrntJob.Designaion)
+	fmt.Printf("Person Salary: %v\n" , person.CurrntJob.Salary)
+} 
+func HasPassword(user User) bool {
+	return user.password != ""
 }
