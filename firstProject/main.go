@@ -10,8 +10,15 @@ func main(){
 	lib.Increment(count);
 	fmt.Println("The value of count after executing Increment function is :" , count)
 	ram := lib.Person{}
-	ram.Name = "Ram Sharma"
+	ram.Name= "Ram Sharma"
 	ram.Age = 21;
+
+	dhiraj := lib.User{}
+
+	lib.SetUserName(&dhiraj , "Dhiraj Prasad")
+
+	fmt.Printf("The name of the use dhiraj is : %v ", lib.GetUserName(dhiraj))
+
 
 	fmt.Printf("Name %v , Age %v", ram.Name, ram.Age)
 	fmt.Println(lib.GetPersonName(ram))
